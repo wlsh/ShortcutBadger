@@ -283,7 +283,7 @@ public final class BadgeUtil {
 
         //示例中ids这个参数可以为空或者“null”表示对主图标进行角标标记；custom_id_1等id值，是应用自定义的对应快捷方式的id，如果应用有快捷方式在桌面创建需要将此id传给桌面在后面将有说明。
         //这个例子中如果有多个id，那么表示多个id的角标值是一样的为counts。如果每个id有不同的值，需要分别循环调用并设置值，也就是一个id和对应counts值调用一次此接口。如果ids为null将更新主图标。
-        extra.putStringArrayList("app_shortcut_custom_id", null);
+        extra.putStringArrayList("app_shortcut_custom_id", "null");
         extra.putInt("app_badge_count", count);
 
         Bundle b = null;
