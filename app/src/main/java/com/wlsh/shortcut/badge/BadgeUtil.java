@@ -48,15 +48,15 @@ public final class BadgeUtil {
             count = Math.max(0, Math.min(count, 99));
         }
         if (Build.MANUFACTURER.equalsIgnoreCase("xiaomi")) {
-            setBadgeOfMIUI(context, count);
+            setBadgeOfMiui(context, count);
         } else if (Build.MANUFACTURER.equalsIgnoreCase("sony")) {
             setBadgeOfSony(context, count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("samsung")) {
-            setBadgeOfSumsung(context, count);
+            setBadgeOfSamsung(context, count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("lg")) {
-            setBadgeOfSumsung(context, count);
+            setBadgeOfSamsung(context, count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("htc")) {
-            setBadgeOfHTC(context, count);
+            setBadgeOfHtc(context, count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("nova")) {
             setBadgeOfNova(context, count);
         } else if (Build.MANUFACTURER.toLowerCase().contains("huawei")) {
@@ -78,7 +78,7 @@ public final class BadgeUtil {
      * @param context context
      * @param count   count
      */
-    private static void setBadgeOfMIUI(Context context, int count, int iconResId) {
+    private static void setBadgeOfMiui(Context context, int count, int iconResId) {
         Log.d("xys", "Launcher : MIUI");
         NotificationManager mNotificationManager = (NotificationManager) context
                 .getSystemService(NOTIFICATION_SERVICE);
@@ -103,7 +103,7 @@ public final class BadgeUtil {
      * @param context context
      * @param count   count
      */
-    private static void setBadgeOfMIUI(Context context, int count) {
+    private static void setBadgeOfMiui(Context context, int count) {
         //do nothing 小米角标是绑定通知的
     }
 
@@ -144,7 +144,7 @@ public final class BadgeUtil {
      * @param context context
      * @param count   count
      */
-    private static void setBadgeOfSumsung(Context context, int count) {
+    private static void setBadgeOfSamsung(Context context, int count) {
         // 获取你当前的应用
         String launcherClassName = AppInfoUtil.getLauncherClassName(context);
         if (launcherClassName == null) {
@@ -163,7 +163,7 @@ public final class BadgeUtil {
      * @param context context
      * @param count   count
      */
-    private static void setBadgeOfHTC(Context context, int count) {
+    private static void setBadgeOfHtc(Context context, int count) {
         Intent intentNotification = new Intent("com.htc.launcher.action.SET_NOTIFICATION");
         ComponentName localComponentName = new ComponentName(context.getPackageName(),
                 AppInfoUtil.getLauncherClassName(context));
