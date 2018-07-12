@@ -1,0 +1,2 @@
+# ShortcutBadge
+shortcut util
